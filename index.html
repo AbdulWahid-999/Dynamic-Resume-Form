@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Resume Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="resume-builder">
+    <h2>Dynamic Resume Form</h2>
+
+    <form id="resume-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="contact">Phone Number:</label>
+        <input type="text" id="contact" name="contact" required >
+      </div>
+      <div class="form-group">
+        <label for="education">Education:</label>
+        <textarea id="education" name="education" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="skills">Skills:</label>
+        <textarea id="skills" name="skills" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="work-experience">Work Experience:</label>
+        <textarea id="work-experience" name="work-experience" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Generate Resume</button>
+      </div>
+    </form>
+
+    <!-- This is where the resume will appear -->
+    <div id="resume-output" style="display: none;"></div>
+  </div>
+
+  <!-- Link the compiled JavaScript file -->
+  <script src="index.js"></script>
+</body>
+</html>
