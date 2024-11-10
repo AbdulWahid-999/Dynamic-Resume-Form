@@ -1,82 +1,87 @@
+/* General body styling */
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  margin: 20px;
+  margin: 0;
   padding: 0;
   background: url(whit.avif);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
+/* Form container styling for larger screens */
 form {
-  margin: auto;
+  margin: 0 auto;
   background-color: #edf2f4;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  max-width: 600px;
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
 }
 
+/* Styling for the title */
 h1 {
   font-family: "Hanuman", sans-serif;
   font-weight: 700;
-  font-style:italic;
+  font-style: italic;
   text-align: center;
-  font-weight: 700;
-  margin-bottom: 45px;
-
+  margin-bottom: 25px;
+  font-size: 2.4rem;
 }
 
+/* Styling for fieldsets */
 fieldset {
   border: 2px solid #000000;
   border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
   background-color: #f1faee;
 }
 
-legend {
-  font-weight: bold;
-  text-align: left;
-  color: rgb(34, 29, 29);
-}
-
+/* Label and input field adjustments */
 label {
   display: block;
   margin-top: 10px;
   color: black;
-
+  font-size: 1.2rem;
 }
 
-
-input,textarea {
-  margin-top: 4px;
-  padding: 8px;
-  width: calc(100% - 1px);
+input,
+textarea {
+  margin-top: 6px;
+  padding: 12px;
+  width: calc(100% - 2px);
   border: 1px solid #eaf4f4;
   border-radius: 4px;
   box-sizing: border-box;
   resize: none;
+  font-size: 1rem;
 }
- .btn-group {
+
+.btn-group {
   display: flex;
   gap: 15px;
- }
- 
-button {
+}
 
+/* Button styling */
+button {
   background-color: #f1faee;
   color: black;
   border: none;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   margin-top: 10px;
-  font-size: 18px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  padding: 10px;
+  font-size: 1.2rem;
+  padding: 15px;
+  width: 100%;
 }
-
 
 button:hover {
   background: black;
@@ -84,43 +89,94 @@ button:hover {
   transform: scale(1.08);
   transition: 0.5s ease;
 }
-  
 
-  
+/* Generated resume container */
+.generated-resume {
+  margin-top: 40px;
+  background-color: white;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 100%;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust form size for smaller screens */
+  form {
+    width: 100vw;
+    height: 100vh;
+    padding: 5%;
+    overflow-y: auto; /* Allow scrolling if content exceeds viewport height */
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Larger font size */
+  }
+
+  fieldset {
+    padding: 20px;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  input,
+  textarea {
+    padding: 15px;
+    font-size: 1.2rem; /* Larger font size */
+  }
+
+  button {
+    font-size: 1.3rem;
+    padding: 18px;
+  }
+
   .generated-resume {
-    margin-top: 100px;
-    background-color: white;
-    padding: 40px;
-    border: 1px solid #ddd;
-    border-radius: 40px;
+    padding: 30px;
+    font-size: 1.3rem;
+    margin-top: 30px;
+  }
 }
-.generated-resume h2{
-  text-align: center;
-  font-family:"Hanuman", sans-serif ;
-  font-style: italic;
-  padding: 15px 0px;
+
+/* Adjust form for very small screens (400px and below) */
+@media (max-width: 400px) {
+  form {
+    width: 90vw; /* Make the form take up 90% of the screen width */
+    height: 100vh; /* Full height of the viewport */
+    padding: 10%; /* More padding for better spacing */
+  }
+
+  h1 {
+    font-size: 3rem; /* Increase font size */
+  }
+
+  fieldset {
+    padding: 15px;
+  }
+
+  label {
+    font-size: 1.5rem; /* Increase label font size */
+  }
+
+  input,
+  textarea {
+    padding: 18px;
+    font-size: 1.4rem; /* Increase input and textarea font size */
+  }
+
+  button {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  .generated-resume {
+    padding: 25px;
+    font-size: 1.4rem;
+  }
 }
-  
-  
-  .generated-resume p {
-    font-size: 16px;
-    margin-bottom: 10px;
-    line-height: 2;
-  }
-  
-  .generated-resume strong {
-    font-family: Georgia, 'Times New Roman', Times, serif ;
-    font-weight: bold;
-  display: inline-block;
-  width: 100px; /* Adjust as needed for better alignment */
-  margin-right: 10px;
-  margin-bottom: 5px;
-  }
-  .generated-resume img {
-   
-    display: block;
-    margin: 30px auto 25px; /* Centers image and adds space below it */
-    border-radius: 10px; /* Optional: gives rounded corners to the image */
-    max-width: 150px;
-    height: 100px;
-  }
